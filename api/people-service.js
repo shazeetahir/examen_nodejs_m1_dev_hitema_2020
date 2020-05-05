@@ -11,5 +11,16 @@ module.exports = class PeopleService {
     
     getPeople(filters) {
         // To be implemented!
+        const b = 0;
+
+        if(Object.keys(filters).length === b)
+        { 
+            return this.peoples;
+        }
+        else
+        {       const peopleIndex = this.peoples.filter(
+                people => people[Object.keys(filters)[0]]===filters[Object.keys(filters)[0]]
+            ); return peopleIndex;
+        }
     }
 }
